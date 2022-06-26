@@ -5,10 +5,12 @@ import eyijin.hellospring.repository.MemberRepository;
 import eyijin.hellospring.repository.MemoryMemberRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
 
+@Transactional //jpa는 join을 할 때, 모든 변경이 transaction안에서 실행돼야 합니다.
 public class MemberService {
     private final MemberRepository memberRepository;
 
