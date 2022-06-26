@@ -1,6 +1,7 @@
 package eyijin.hellospring;
 
 import eyijin.hellospring.repository.JdbcMemberRepository;
+import eyijin.hellospring.repository.JdbcTemplateMemberRepository;
 import eyijin.hellospring.repository.MemberRepository;
 import eyijin.hellospring.repository.MemoryMemberRepository;
 import eyijin.hellospring.service.MemberService;
@@ -24,7 +25,8 @@ public class SpringConfig {
 
     @Bean
     public MemberRepository memberRepository(){
-        return new JdbcMemberRepository(dataSource);
+//        return new JdbcMemberRepository(dataSource);
 //        return new MemoryMemberRepository();
+        return new JdbcTemplateMemberRepository(dataSource);
     }
 }
