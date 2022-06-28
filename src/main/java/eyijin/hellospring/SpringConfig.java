@@ -1,5 +1,6 @@
 package eyijin.hellospring;
 
+import eyijin.hellospring.AOP.TimeTraceAop;
 import eyijin.hellospring.domain.Member;
 import eyijin.hellospring.repository.*;
 import eyijin.hellospring.service.MemberService;
